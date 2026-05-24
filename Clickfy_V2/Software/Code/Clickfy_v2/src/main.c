@@ -48,7 +48,6 @@ static const uint8_t hid_report_map[] = {
     0x15, 0x00, 0x26, 0x3C, 0x02, 0x95, 0x01, 0x75, 0x10, 0x81, 0x00, 0xC0};
 
 // --- USŁUGI GATT ---
-// Poprawka: Usunięto nieistniejącą flagę BLE_GATT_CHR_F_NOTIFY_ENC (w NimBLE wystarczy NOTIFY + READ_ENC)
 static const struct ble_gatt_svc_def gatt_svcs[] = {
     {.type = BLE_GATT_SVC_TYPE_PRIMARY,
      .uuid = BLE_UUID16_DECLARE(0x1812),
@@ -226,8 +225,6 @@ void hardware_task(void *param)
             last_activity = xTaskGetTickCount();
         }
 
-        // Tickless idle z FreeRTOS pozwala na automatyczne przejście w light sleep
-        // gdy system nie ma nic do roboty
         vTaskDelay(pdMS_TO_TICKS(in_sleep_mode ? 200 : 100));
     }
 }
