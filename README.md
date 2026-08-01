@@ -1,52 +1,11 @@
 # Clickfy – BLE Multimedia Remote
 
-## Description
+Clickfy is a compact, keychain-sized multimedia remote based on the ESP32-C3. It communicates through the BLE HID profile and provides dedicated controls for play/pause, next track and previous track. A custom PCB integrates the control buttons, Li-Po battery, status LED and battery-voltage monitoring circuit. The firmware uses sleep modes to reduce power consumption, with development focused on minimizing wake-up and BLE reconnection times.
 
-Clickfy is a compact ESP32-based Bluetooth Low Energy multimedia remote designed as a portable keychain controller. The device allows users to control basic media functions such as play/pause, next track and previous track wirelessly.
+## Technologies
 
-The main goal of the project was to create a small, battery-powered device with low power consumption and fast response time.
+`ESP32-C3` `C/C++` `Bluetooth Low Energy` `BLE HID` `Li-Po battery` `ADC battery monitoring` `Custom PCB` `Low-power operation`
 
-## Features
+## Usage and development status
 
-* Bluetooth Low Energy (BLE) multimedia control
-* Play / Pause
-* Next track
-* Previous track
-* Battery voltage monitoring
-* Low-power operation
-* Compact custom PCB
-* Portable keychain-sized design
-
-## Hardware
-
-* ESP32-C3
-* Li-Po battery
-* Push buttons
-* Status LED
-* Custom PCB design
-
-## Software
-
-* C/C++
-* BLE HID profile
-* Battery measurement using ADC
-* Power management and sleep modes
-
-## Challenges
-
-Some of the main development challenges included:
-
-* minimizing power consumption,
-* reducing wake-up and reconnection time after sleep,
-* implementing reliable BLE communication,
-* designing a compact PCB layout.
-
-## Current status
-
-Working prototype built and tested.
-
-Future improvements:
-
-* further firmware power optimization,
-* faster BLE wake-up behavior,
-* additional multimedia functions.
+After powering on the device, pair Clickfy with a phone, computer or another BLE-compatible media device and use the three buttons to control playback. The current prototype has been built and tested. Planned improvements include further power optimization, shorter reconnection times and support for additional multimedia functions.
